@@ -19,5 +19,9 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.30"
-  }
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.2.4"
+  }  
 }
