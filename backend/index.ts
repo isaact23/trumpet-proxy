@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import { query } from "./query";
 
 const PORT = process.env.PORT || 8080;
 const PATH = path.join(__dirname, "../frontend/build");
@@ -12,13 +11,22 @@ let notes = "G A B C D";
 
 app.use(express.static(PATH));
 
+app.get("/", (req, res) => {
+  res.send(path.join(PATH, "index.html"));
+});
+
+// Handle hardware request for music
+app.get("/music", (req, res) => {
+  // Send music data
+});
+
 // Handle client request to upload image
 app.post("/img", async (req, res) => {
 
   // Store the image on the backend
 
-  // Send image to OpenAI
-  const text = await query();
+  // Send image to convert to MIDI
+  const text = "A B C";
 
   // Store OpenAI results on backend
   if (text != null) {
@@ -29,11 +37,6 @@ app.post("/img", async (req, res) => {
   }
 
   res.end();
-});
-
-// Handle hardware request for music
-app.get("music", (req, res) => {
-  // Send music data
 });
 
 app.listen(PORT, () => {
