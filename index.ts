@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 
 const PORT = process.env.PORT || 8080;
-const PATH = path.join(__dirname, "../frontend/build");
+const PATH = path.join(__dirname, "./frontend/build");
 
 const app = express();
 

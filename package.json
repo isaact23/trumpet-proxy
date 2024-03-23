@@ -1,7 +1,23 @@
 {
-  "name": "trumpet-proxy",
+  "name": "trumpet-proxy-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "cd ./backend && npm run start",
-    "build": "cd ./frontend && npm i && npm run build && cd ../backend && npm i && cd .."
+    "start": "ts-node index.ts",
+    "build": "cd ./frontend && npm i && npm run build && cd .. && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "openai": "^4.29.2",
+    "path": "^0.12.7",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30"
   }
 }
