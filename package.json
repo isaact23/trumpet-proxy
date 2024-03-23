@@ -2,6 +2,6 @@
   "name": "trumpet-proxy",
   "scripts": {
     "start": "cd ./backend && npm run start",
-    "build": "cd ./frontend && npm i && npm run build && cd ../backend && npm i"
+    "build": "cd ./frontend && npm i && npm run build && cd ../backend && npm i && cd .."
   }
 }
