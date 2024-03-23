@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import { query } from "./query";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const PATH = path.join(__dirname, "../frontend/build");
 
 const app = express();
