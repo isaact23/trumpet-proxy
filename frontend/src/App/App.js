@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Trumpet Prosthetic</h1>
+        <h1>Trumpet Triumph</h1>
       </header>
       <div className="centeredContent">
         <FileUpload className="FileUpload" />
