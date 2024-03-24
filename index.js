@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
-import { mozartToJson } from "./src/convert.js"
 
 const PORT = process.env.PORT || 8080;
 const PATH = path.join(path.dirname(new URL(import.meta.url).pathname), "./frontend/build");
@@ -13,22 +12,82 @@ app.use(express.static(PATH));
 let img = null;
 let notes = {
   0: {
-    time: 1000,
-    val1: 1,
+    time: 400,
+    val1: 0,
     val2: 0,
     val3: 0
   },
   1: {
-    time: 1000,
+    time: 400,
+    val1: 1,
+    val2: 1,
+    val3: 1
+  },
+  2: {
+    time: 400,
+    val1: 1,
+    val2: 0,
+    val3: 1
+  },
+  3: {
+    time: 400,
+    val1: 0,
+    val2: 1,
+    val3: 1
+  },
+  4: {
+    time: 400,
+    val1: 1,
+    val2: 1,
+    val3: 0
+  },
+  5: {
+    time: 400,
+    val1: 1,
+    val2: 0,
+    val3: 0
+  },
+  6: {
+    time: 400,
     val1: 0,
     val2: 1,
     val3: 0
   },
-  2: {
-    time: 1000,
+  7: {
+    time: 400,
     val1: 0,
     val2: 0,
+    val3: 0
+  },
+  8: {
+    time: 400,
+    val1: 0,
+    val2: 1,
     val3: 1
+  },
+  9: {
+    time: 400,
+    val1: 1,
+    val2: 1,
+    val3: 0
+  },
+  10: {
+    time: 400,
+    val1: 1,
+    val2: 0,
+    val3: 0
+  },
+  11: {
+    time: 400,
+    val1: 0,
+    val2: 1,
+    val3: 0
+  },
+  12: {
+    time: 400,
+    val1: 0,
+    val2: 0,
+    val3: 0
   }
 };
 
@@ -51,11 +110,13 @@ app.post("/img", (req, res) => {
   console.log("Server received image");
 
   // Send image to convert to MIDI
-  const mozart = "MozartDataExport";
+  //const mozart = "MozartDataExport";
 
   // Convert MIDI to JSON format and store JSON
-  notes = mozartToJson(mozart);
+  //notes = mozartToJson(mozart);
 });
+
+mozartToJson("test");
 
 app.listen(PORT, () => {
   console.log(`prosthetiproxy listening on ${PORT}`);
