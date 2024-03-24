@@ -26,7 +26,7 @@ function FileUpload() {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      axios.post('http://localhost/img', "test");
+      axios.post('https://trumpet-prosthetic-f47753833eed.herokuapp.com/img', "test");
 
       /*axios.post('http://localhost/img', formData, {
         headers: {
