@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+import { mozartToJson } from "./src/convert.js"
 
 const PORT = process.env.PORT || 8080;
 const PATH = path.join(path.dirname(new URL(import.meta.url).pathname), "./frontend/build");
@@ -50,9 +51,10 @@ app.post("/img", (req, res) => {
   console.log("Server received image");
 
   // Send image to convert to MIDI
+  const mozart = "MozartDataExport";
 
-  // Convert MIDI to JSON format
-  const text = "A B C";
+  // Convert MIDI to JSON format and store JSON
+  notes = mozartToJson(mozart);
 });
 
 app.listen(PORT, () => {
