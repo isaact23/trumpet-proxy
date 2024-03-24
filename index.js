@@ -10,27 +10,26 @@ app.use(cors());
 app.use(express.static(PATH));
 
 let img = null;
-let notes = [
-  {
+let notes = {
+  0: {
     time: 1,
     val1: 1,
     val2: 0,
     val3: 0
   },
-  {
+  1: {
     time: 1,
     val1: 0,
     val2: 1,
     val3: 0
   },
-  {
+  2: {
     time: 1,
     val1: 0,
     val2: 0,
     val3: 1
   }
-]
-"G A B C D";
+};
 
 app.get("/", (req, res) => {
   console.log("Server got request for index.html");
