@@ -12,79 +12,79 @@ app.use(express.static(PATH));
 let img = null;
 let notes = {
   0: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 0,
     val3: 0
   },
   1: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 1,
     val3: 1
   },
   2: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 0,
     val3: 1
   },
   3: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 1,
     val3: 1
   },
   4: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 1,
     val3: 0
   },
   5: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 0,
     val3: 0
   },
   6: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 1,
     val3: 0
   },
   7: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 0,
     val3: 0
   },
   8: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 1,
     val3: 1
   },
   9: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 1,
     val3: 0
   },
   10: {
-    time: 400,
+    time: 1500,
     val1: 1,
     val2: 0,
     val3: 0
   },
   11: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 1,
     val3: 0
   },
   12: {
-    time: 400,
+    time: 1500,
     val1: 0,
     val2: 0,
     val3: 0
