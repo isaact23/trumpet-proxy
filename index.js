@@ -116,8 +116,6 @@ app.post("/img", (req, res) => {
   //notes = mozartToJson(mozart);
 });
 
-mozartToJson("test");
-
 app.listen(PORT, () => {
   console.log(`prosthetiproxy listening on ${PORT}`);
 });
