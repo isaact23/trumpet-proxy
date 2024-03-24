@@ -25,8 +25,10 @@ function FileUpload() {
     if (selectedFile) {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      
-      axios.post('localhost/img', formData, {
+
+      axios.post('http://localhost/img', "test");
+
+      /*axios.post('http://localhost/img', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -38,7 +40,7 @@ function FileUpload() {
       .catch(error => {
         // Handle error
         console.error('Error uploading file:', error);
-      });
+      });*/
 
       console.log('File uploaded:', selectedFile);
     } else {
