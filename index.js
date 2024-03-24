@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+import multer from "multer";
 
 const PORT = process.env.PORT || 8080;
 const PATH = path.join(path.dirname(new URL(import.meta.url).pathname), "./frontend/build");
@@ -9,23 +10,33 @@ const app = express();
 app.use(cors());
 app.use(express.static(PATH));
 
+const upload = multer({
+  dest: "/upload"
+});
+
 let img = null;
 let notes = "G A B C D";
 
 app.get("/", (req, res) => {
+  console.log("Server got request for index.html");
   res.send(path.join(PATH, "index.html"));
 });
 
 // Handle hardware request for music
 app.get("/music", (req, res) => {
+  console.log("Server got request for music");
+
   // Send music data
   res.send(notes);
 });
 
 // Handle client request to upload image
-app.post("/img", (req, res) => {
+app.post("/img", upload.single("file"), (req, res) => {
+  res.send("Image received");
+  console.log("Server received image");
 
   // Store the image on the backend
+  console.log(req.file.path);
 
   // Send image to convert to MIDI
   const text = "A B C";

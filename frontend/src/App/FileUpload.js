@@ -26,9 +26,9 @@ function FileUpload() {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      axios.post('https://trumpet-prosthetic-f47753833eed.herokuapp.com/img', "test");
+      //axios.post('https://trumpet-prosthetic-f47753833eed.herokuapp.com/img', "test");
 
-      /*axios.post('http://localhost/img', formData, {
+      axios.post('https://trumpet-prosthetic-f47753833eed.herokuapp.com/img', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -40,7 +40,7 @@ function FileUpload() {
       .catch(error => {
         // Handle error
         console.error('Error uploading file:', error);
-      });*/
+      });
 
       console.log('File uploaded:', selectedFile);
     } else {
